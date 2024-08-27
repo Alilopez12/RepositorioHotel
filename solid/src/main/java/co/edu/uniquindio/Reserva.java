@@ -11,6 +11,7 @@ public class Reserva {
     private Collection<Cliente> listaClientesAsociados;
     private Habitacion habitacionAsociada;
 
+    // Constructor de la clase Reserva
     public Reserva(LocalDate horaEntrada, LocalDate horaSalida, Cliente clienteAsociado,
                    Collection<Cliente> listaClientesAsociados, Habitacion habitacionAsociada) {
         this.horaEntrada = horaEntrada;
@@ -31,11 +32,11 @@ public class Reserva {
                         "\nTipo de Habitación: " + habitacionAsociada.getTipoHabitacion() +
                         "\nFecha de Entrada: " + horaEntrada +
                         "\nFecha de Salida: " + horaSalida);
+    }
 
     /*
     Getters y Setters
      */
-
     public LocalDate getHoraEntrada() {
         return horaEntrada;
     }
