@@ -4,16 +4,9 @@ public class ServicioDeHabitacion extends Servicio{
 
     private String detalle;
 
-    public ServicioDeHabitacion(String nombre, double precio, TipoServicio tipoServicio, String detalle) {
-        super(nombre, precio, tipoServicio);
-        this.detalle = detalle;
-    }
-
-    public String getDetalle() {
-        return detalle;
-    }
-
-    public void setDetalle(String detalle) {
+    public ServicioDeHabitacion(String nombre, double precio, TipoServicio tipoServicio,
+                                Habitacion habitacionAsociada, String detalle) {
+        super(nombre, precio, tipoServicio, habitacionAsociada);
         this.detalle = detalle;
     }
 

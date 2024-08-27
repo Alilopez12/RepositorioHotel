@@ -6,18 +6,22 @@ import java.util.Collection;
 public class Reserva {
     private LocalDate horaEntrada;
     private LocalDate horaSalida;
-    private Cliente cliente;
-    private Collection<Cliente> listaClientes;
-    private Habitacion habitacion;
+    private Cliente clienteAsociado;
+    private Collection<Cliente> listaClientesAsociados;
+    private Habitacion habitacionAsociada;
 
-    public Reserva(LocalDate horaEntrada, LocalDate horaSalida, Cliente cliente, Collection<Cliente> listaClientes, Habitacion habitacion) {
+    public Reserva(LocalDate horaEntrada, LocalDate horaSalida, Cliente clienteAsociado,
+                   Collection<Cliente> listaClientesAsociados, Habitacion habitacionAsociada) {
         this.horaEntrada = horaEntrada;
         this.horaSalida = horaSalida;
-        this.cliente = cliente;
-        this.listaClientes = listaClientes;
-        this.habitacion = habitacion;
+        this.clienteAsociado = clienteAsociado;
+        this.listaClientesAsociados = listaClientesAsociados;
+        this.habitacionAsociada = habitacionAsociada;
     }
 
+    /*
+    Getters y Setters
+     */
 
     public LocalDate getHoraEntrada() {
         return horaEntrada;
@@ -35,29 +39,27 @@ public class Reserva {
         this.horaSalida = horaSalida;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Cliente getClienteAsociado() {
+        return clienteAsociado;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setClienteAsociado(Cliente clienteAsociado) {
+        this.clienteAsociado = clienteAsociado;
     }
 
-    public Collection<Cliente> getListaClientes() {
-        return listaClientes;
+    public Collection<Cliente> getListaClientesAsociados() {
+        return listaClientesAsociados;
     }
 
-    public void setListaClientes(Collection<Cliente> listaClientes) {
-        this.listaClientes = listaClientes;
+    public void setListaClientesAsociados(Collection<Cliente> listaClientesAsociados) {
+        this.listaClientesAsociados = listaClientesAsociados;
     }
 
-    public Habitacion getHabitacion() {
-        return habitacion;
+    public Habitacion getHabitacionAsociada() {
+        return habitacionAsociada;
     }
 
-    public void setHabitacion(Habitacion habitacion) {
-        this.habitacion = habitacion;
+    public void setHabitacionAsociada(Habitacion habitacionAsociada) {
+        this.habitacionAsociada = habitacionAsociada;
     }
- 
-
 }

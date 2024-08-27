@@ -6,17 +6,19 @@ public class Cliente {
 
     private String nombre;
     private String dni;
-    private Reserva reserva;
-    private Collection<Reserva> listaReservas;
+    private Reserva reservaAsociada;
+    private Collection<Reserva> listaReservasAsociadas;
 
-
-    public Cliente(String nombre, String dni, Reserva reserva, Collection<Reserva> listaReservas) {
+    public Cliente(String nombre, String dni, Reserva reservaAsociada, Collection<Reserva> listaReservasAsociadas) {
         this.nombre = nombre;
         this.dni = dni;
-        this.reserva = reserva;
-        this.listaReservas = listaReservas;
+        this.reservaAsociada = reservaAsociada;
+        this.listaReservasAsociadas = listaReservasAsociadas;
     }
 
+    /*
+    Getters y Setters
+     */
     public String getNombre() {
         return nombre;
     }
@@ -24,7 +26,6 @@ public class Cliente {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
 
     public String getDni() {
         return dni;
@@ -34,24 +35,19 @@ public class Cliente {
         this.dni = dni;
     }
 
-    public Reserva getReserva() {
-        return reserva;
+    public Reserva getReservaAsociada() {
+        return reservaAsociada;
     }
 
-    public void setReserva(Reserva reserva) {
-        this.reserva = reserva;
+    public void setReservaAsociada(Reserva reservaAsociada) {
+        this.reservaAsociada = reservaAsociada;
     }
 
-
-    public Collection<Reserva> getListaReservas() {
-        return listaReservas;
+    public Collection<Reserva> getListaReservasAsociadas() {
+        return listaReservasAsociadas;
     }
 
-    public void setListaReservas(Collection<Reserva> listaReservas) {
-        this.listaReservas = listaReservas;
+    public void setListaReservasAsociadas(Collection<Reserva> listaReservasAsociadas) {
+        this.listaReservasAsociadas = listaReservasAsociadas;
     }
-
-
-
-
 }

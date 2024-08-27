@@ -1,18 +1,21 @@
 package co.edu.uniquindio;
 
-public class Servicio implements Consumible{
+public abstract class Servicio implements Consumible{
     private String nombre;
     private double precio;
     private TipoServicio tipoServicio;
+    private Habitacion habitacionAsociada;
 
-
-
-    public Servicio(String nombre, double precio, TipoServicio tipoServicio) {
+    public Servicio(String nombre, double precio, TipoServicio tipoServicio, Habitacion habitacionAsociada) {
         this.nombre = nombre;
         this.precio = precio;
         this.tipoServicio = tipoServicio;
+        this.habitacionAsociada = habitacionAsociada;
     }
 
+    /*
+    Getters y Setters
+     */
 
     public String getNombre() {
         return nombre;
@@ -38,7 +41,13 @@ public class Servicio implements Consumible{
         this.tipoServicio = tipoServicio;
     }
 
+    public Habitacion getHabitacionAsociada() {
+        return habitacionAsociada;
+    }
 
+    public void setHabitacionAsociada(Habitacion habitacionAsociada) {
+        this.habitacionAsociada = habitacionAsociada;
+    }
 
     //implementación interface
     @Override

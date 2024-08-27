@@ -6,16 +6,23 @@ public class Habitacion {
     private int numero;
     private double precio;
     private TipoHabitacion tipoHabitacion;
+    private Reserva reservaAsociada;
     private Collection<Servicio> listaServicios;
+    private Collection<ServicioDeHabitacion> listaServiciosDeHabitacion;
 
-    public Habitacion(int numero, double precio, TipoHabitacion tipoHabitacion, Collection<Servicio> listaServicios, Collection<ServicioDeHabitacion> listaServiciosDeHabitacion) {
+    public Habitacion(int numero, double precio, TipoHabitacion tipoHabitacion, Reserva reservaAsociada, Collection<Servicio> listaServicios,
+                      Collection<ServicioDeHabitacion> listaServiciosDeHabitacion) {
         this.numero = numero;
         this.precio = precio;
         this.tipoHabitacion = tipoHabitacion;
+        this.reservaAsociada = reservaAsociada;
         this.listaServicios = listaServicios;
         this.listaServiciosDeHabitacion = listaServiciosDeHabitacion;
     }
 
+    /*
+    Getters y Setters
+     */
 
     public int getNumero() {
         return numero;
@@ -25,29 +32,12 @@ public class Habitacion {
         this.numero = numero;
     }
 
-
     public double getPrecio() {
         return precio;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
-    }
-
-    public Collection<ServicioDeHabitacion> getListaServiciosDeHabitacion() {
-        return listaServiciosDeHabitacion;
-    }
-
-    public void setListaServiciosDeHabitacion(Collection<ServicioDeHabitacion> listaServiciosDeHabitacion) {
-        this.listaServiciosDeHabitacion = listaServiciosDeHabitacion;
-    }
-
-    public Collection<Servicio> getListaServicios() {
-        return listaServicios;
-    }
-
-    public void setListaServicios(Collection<Servicio> listaServicios) {
-        this.listaServicios = listaServicios;
     }
 
     public TipoHabitacion getTipoHabitacion() {
@@ -58,8 +48,27 @@ public class Habitacion {
         this.tipoHabitacion = tipoHabitacion;
     }
 
-    private Collection<ServicioDeHabitacion> listaServiciosDeHabitacion;
+    public Reserva getReservaAsociada() {
+        return reservaAsociada;
+    }
 
+    public void setReservaAsociada(Reserva reservaAsociada) {
+        this.reservaAsociada = reservaAsociada;
+    }
 
+    public Collection<Servicio> getListaServicios() {
+        return listaServicios;
+    }
 
+    public void setListaServicios(Collection<Servicio> listaServicios) {
+        this.listaServicios = listaServicios;
+    }
+
+    public Collection<ServicioDeHabitacion> getListaServiciosDeHabitacion() {
+        return listaServiciosDeHabitacion;
+    }
+
+    public void setListaServiciosDeHabitacion(Collection<ServicioDeHabitacion> listaServiciosDeHabitacion) {
+        this.listaServiciosDeHabitacion = listaServiciosDeHabitacion;
+    }
 }
