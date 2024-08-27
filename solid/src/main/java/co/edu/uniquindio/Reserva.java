@@ -1,5 +1,6 @@
 package co.edu.uniquindio;
 
+import javax.swing.*;
 import java.time.LocalDate;
 import java.util.Collection;
 
@@ -18,6 +19,18 @@ public class Reserva {
         this.listaClientesAsociados = listaClientesAsociados;
         this.habitacionAsociada = habitacionAsociada;
     }
+
+    /**
+     * Muestra los detalles de la reserva
+     */
+    public void mostrarDetallesReserva() {
+        JOptionPane.showMessageDialog(null,
+                "Cliente: " + clienteAsociado.getNombre() +
+                        "\nDNI: " + clienteAsociado.getDni() +
+                        "\nHabitación Número: " + habitacionAsociada.getNumero() +
+                        "\nTipo de Habitación: " + habitacionAsociada.getTipoHabitacion() +
+                        "\nFecha de Entrada: " + horaEntrada +
+                        "\nFecha de Salida: " + horaSalida);
 
     /*
     Getters y Setters
