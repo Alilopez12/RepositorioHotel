@@ -50,4 +50,5 @@ public class Cliente {
     public void setListaReservasAsociadas(Collection<Reserva> listaReservasAsociadas) {
         this.listaReservasAsociadas = listaReservasAsociadas;
     }
+
 }
