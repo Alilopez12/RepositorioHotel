@@ -51,8 +51,6 @@ public abstract class Servicio implements Consumible{
 
     //implementación interface
     @Override
-    public void consumir() {
-        // para probar el metodo
-        System.out.println("El servicio " + nombre + " ha sido consumido.");
-    }
+    public abstract void consumir();
+
 }

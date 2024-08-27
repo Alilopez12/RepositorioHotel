@@ -11,4 +11,10 @@ public class ServicioDeHabitacion extends Servicio{
     }
 
 
+    @Override
+    public void consumir() {
+        System.out.println("Servicio Consumido: " + getNombre());
+        System.out.println("Detalles: " + detalle);
+        System.out.println("Precio: " + getPrecio());
+    }
 }
