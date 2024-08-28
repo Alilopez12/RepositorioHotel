@@ -1,14 +1,16 @@
 package co.edu.uniquindio;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class Cliente {
 
     private String nombre;
     private String dni;
     private Reserva reservaAsociada;
-    private Collection<Reserva> listaReservasAsociadas;
+    private List<Reserva> reservas;
 
 
     /*
@@ -24,7 +26,16 @@ public class Cliente {
         this.nombre = nombre;
         this.dni = dni;
         this.reservaAsociada = reservaAsociada;
-        this.listaReservasAsociadas = listaReservasAsociadas;
+        this.reservas = new ArrayList<>();
+    }
+
+    /**
+     * Agrega una reserva a la colección de reservas del cliente.
+     *
+     * @param reserva La reserva a agregar.
+     */
+    public void agregarReserva(Reserva reserva) {
+        reservas.add(reserva);
     }
 
     /*
@@ -54,12 +65,12 @@ public class Cliente {
         this.reservaAsociada = reservaAsociada;
     }
 
-    public Collection<Reserva> getListaReservasAsociadas() {
-        return listaReservasAsociadas;
+    public List<Reserva> getReservas() {
+        return reservas;
     }
 
-    public void setListaReservasAsociadas(Collection<Reserva> listaReservasAsociadas) {
-        this.listaReservasAsociadas = listaReservasAsociadas;
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
     }
 
     /**
