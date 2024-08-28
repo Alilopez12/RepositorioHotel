@@ -134,6 +134,7 @@ public class Main {
                     "Menú de Sistema de Reserva de Hotel\n" +
                             "1. Crear Habitación\n" +
                             "2. Crear Reserva\n" +
+                            "3. Mostrar Detalles de Reserva asignada\n" +
                             "4. Salir"));
 
             switch (opcion) {
@@ -187,6 +188,27 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Reserva creada con éxito.");
                     break;
 
+                case 3:
+                    // Mostrar detalles de la reserva
+                    dniCliente = JOptionPane.showInputDialog("Ingrese el DNI del cliente para ver su reserva asignada:");
+                    clienteReserva = listaClientes.stream()
+                            .filter(c -> c.getDni().equals(dniCliente))
+                            .findFirst()
+                            .orElse(null);
+
+                    if (clienteReserva == null) {
+                        JOptionPane.showMessageDialog(null, "Cliente no encontrado.");
+                        break;
+                    }
+
+                    if (clienteReserva.getReservas().isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "El cliente no tiene reservas.");
+                    } else {
+                        for (Reserva reserva : clienteReserva.getReservas()) {
+                            reserva.mostrarDetallesReserva();
+                        }
+                    }
+                    break;
 
                 case 4:
                     JOptionPane.showMessageDialog(null, "Gracias por usar el sistema de reservas.");
